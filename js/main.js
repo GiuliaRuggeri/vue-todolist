@@ -19,9 +19,11 @@ const opzioni = {
                 {
                     testo: "play videogames",
                     done: false,
-                }
-            ],
+                },
+            
 
+            ],
+            titolo:"",
         }
     },
 
@@ -32,6 +34,15 @@ const opzioni = {
 
            this.toDoList.splice((item), 1)
 
+        },
+
+        addItem(){
+            let newItem={
+                testo:this.titolo,
+                done:false,
+            }
+            this.toDoList.push(newItem)
+            this.titolo=""
         }
     }
 }
