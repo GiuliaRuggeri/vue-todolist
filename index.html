@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +9,13 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Vue ToDo List</title>
 </head>
+
 <body>
-    
+
     <div id="app">
-        <ul>
-            <li v-for="(item, i) in toDoList" :key="i" :class="item.done ? 'done' : ''" @click="toggleDone(i)" >
-                {{item.testo}}
+        <ul v-if="toDoList.length>=0">
+            <li v-for="(item, i) in toDoList" :key="i" :class="item.done ? 'done' : ''" >
+               <span @click="toggleDone(i)"> {{item.testo}}</span>
                 <button @click="deleteBtn(i)" class="btn btn-danger">X</button>
             </li>
         </ul>
@@ -31,4 +33,5 @@
 
     <script type="text/javascript" src="js/main.js"></script>
 </body>
+
 </html>
