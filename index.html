@@ -14,6 +14,7 @@
         <ul>
             <li v-for="(item, i) in toDoList" :class="item.done ? 'done' : ''" >
                 {{item.testo}}
+                <button @click="deleteBtn(i)" class="btn btn-danger">X</button>
             </li>
         </ul>
     </div>

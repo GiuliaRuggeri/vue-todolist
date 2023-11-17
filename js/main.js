@@ -6,7 +6,7 @@ const opzioni = {
             toDoList: [
                 {
                     testo: "shopping",
-                    done: true,
+                    done: false,
                 },
                 {
                     testo: "cleaning",
@@ -21,6 +21,16 @@ const opzioni = {
                     done: false,
                 }
             ],
+
+        }
+    },
+
+    methods:{
+
+        deleteBtn(item){
+           console.log(item) 
+
+           this.toDoList.splice((item), 1)
 
         }
     }
