@@ -43,6 +43,16 @@ const opzioni = {
             }
             this.toDoList.push(newItem)
             this.titolo=""
+        },
+
+        toggleDone(item){
+            if(this.toDoList[item].done==false){
+                this.toDoList[item].done=true;
+
+            }else{
+                this.toDoList[item].done=false
+                
+            }
         }
     }
 }
